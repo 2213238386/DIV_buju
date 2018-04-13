@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+
+    <style type="text/css">
+        body{
+            padding: 0;
+            margin: 0;
+            height: 1000px;
+        }
+
+        /*
+        */
+        .relative{
+            width: 300px;
+            height: 300px;
+            background: lightgreen;
+            position: relative;
+            left: 30px;
+            top:20px;
+            margin-bottom: 50px;
+
+        }
+        .absolute{
+            position: absolute;
+            background-color: orange;
+            top: -10px;
+            right: 2px;
+        }
+        .fixed{
+            position: fixed;
+            background-color: grey;
+            color: ghostwhite;
+            top:50px;
+        }
+        /*
+        position:
+
+        relative 正常定位  相对定位
+        absolute 根据父元素进行定位  绝对定位
+        fixed    根据浏览器窗口进行定位  绝对定位
+
+        如果你想设置子元素来相对于它的父元素来进行定位的话，你必须设置父元素为 正常定位（relative）
+        */
+        .div{
+            margin-bottom: 2px;
+            background-color: green;
+            color: white;
+            display: inline-block;
+            width: 160px;
+        }
+        .span{
+            margin-right: 2px;
+            display: inline-block;
+            width: 200px;
+            background-color: red;
+            color: white;
+        }
+        
+        /*
+        display:
+
+        block           块级元素   元素前后带有换行符  可以调整该元素的width和height
+        inline          内联元素   元素前后没有换行符  无法调整该元素的width和height
+        inline-blcok   行内块元素  元素前后没有换行符  可以调整该元素的width和height
+
+        */
+    </style>
+</head>
+<body>
+    <div class="relative">
+        <div class="absolute">浏览次数：9999</div><!--如果你想设置子元素来相对于它的父元素来进行定位的话，你必须设置父元素为 正常定位（relative）-->
+    </div>
+    <div class="fixed">
+        <p>联系电话：111111</p>
+        <p>联系qq：123456</p>
+        <p>联系地址：江苏省苏州市</p>
+    </div>
+
+    <div class="div">这是一个div</div>
+    <div class="div">这是一个div</div>
+    <span class="span">这是一个span</span>
+    <span class="span">这是一个span</span>
+</body>
+</html>
